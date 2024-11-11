@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main header styling */
+.sermon-header {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background with blur effect */
+.sermon-header .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image10.jpg'); /* Replace with your actual background image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Applies blur to the background image */
+    z-index: 0; /* Background behind content */
+}
+
+/* Content container */
+.sermon-header .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Navigation */
+.sermon-header nav ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.sermon-header nav ul li {
+    display: inline-block;
+    color: white; /* White color for "Home" */
+    font-weight: bold;
+}
+
+.sermon-header nav ul li span {
+    color: #ff4c4c; /* Color for "Sermon" */
+}
+
+.sermon-header nav ul li a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.sermon-header nav ul li a:hover {
+    color: rgb(145, 145, 73); /* Optional: Add a hover effect to change the color */
+}
+
+/* Title styling */
+.sermon-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.sermon-header .icon {
+    margin-top: 20px;
+}
+
+.sermon-header .icon img {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: auto;
+}
+
+
+.sermons-section {
+    padding: 50px 0;
+    max-width: 1200px; /* Increase the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 40px 20px; /* Add more padding around the container */
+    background-color: #f9f9f9;
+   
+}
+
+.container {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sermon-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+
+}
+
+.sermon-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.sermon-info {
+    padding: 20px;
+}
+
+.sermon-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sermon-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.sermon-controls {
+    margin-top: 10px;
+}
+
+.sermon-controls a {
+    background-color: #d10000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.sermon-controls a:hover {
+    background-color: #b80000;
+}
+
+
+/* Styling the 'Read More' button */
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #d10000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a nice shadow */
+}
+
+.read-more:hover {
+    background-color: #b80000;
+    transform: translateY(-2px); /* A slight lift effect */
+}
+
+
+/* Centering the pagination */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background-color: #fff;
+    margin: 0 5px; /* Add spacing between buttons */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for effect */
+}
+
+.pagination a:hover {
+    background-color: #d10000;
+    color: #fff;
+}
+
+
+/* Footer styling */
+.footer {
+    background: #1e1e2f; /* Dark purple background for a sleek, modern look */
+    padding: 80px 0;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 24%;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+    position: relative;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.news-item span {
+    color: #e63946;
+    font-size: 12px;
+}
+
+.newsletter-column form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 12px;
+    border: none;
+    flex-grow: 1;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #d62828;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+/* Hidden message styling */
+.footer-surprise {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 9999;
+}
+
+#close-surprise {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

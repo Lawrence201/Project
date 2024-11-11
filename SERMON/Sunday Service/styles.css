@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main header styling */
+.sermon-header {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background with blur effect */
+.sermon-header .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image10.jpg'); /* Replace with your actual background image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Applies blur to the background image */
+    z-index: 0; /* Background behind content */
+}
+
+/* Content container */
+.sermon-header .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Navigation */
+.sermon-header nav ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.sermon-header nav ul li {
+    display: inline-block;
+    color: white; /* White color for "Home" */
+    font-weight: bold;
+}
+
+.sermon-header nav ul li span {
+    color: #ff4c4c; /* Color for "Sermon" */
+}
+
+.sermon-header nav ul li a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.sermon-header nav ul li a:hover {
+    color: rgb(145, 145, 73); /* Optional: Add a hover effect to change the color */
+}
+
+/* Title styling */
+.sermon-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.sermon-header .icon {
+    margin-top: 20px;
+}
+
+.sermon-header .icon img {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: auto;
+}
+
+
+    
+
+
+/* Sermon Container */
+
+.sermons-container {
+    max-width: 1200px; /* Increase the width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 40px 20px; /* Add more padding around the container */
+    background-color: #f9f9f9;
+}
+
+.sermon {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+  
+}
+
+.sermon-left {
+    flex: 0 0 45%; /* Adjust the width of the thumbnail section */
+}
+
+.sermon-right {
+    flex: 1;
+    padding-left: 30px;
+}
+
+/* Thumbnail Section */
+.sermon-thumbnail {
+    flex: 0 0 30%;
+    position: relative;
+    display: inline-block; /* Keeps the thumbnail contained */
+    width: 70%;
+    height: 250px; /* Fixed height for all thumbnails */
+    overflow: hidden;
+    
+}
+
+.sermon-thumbnail img {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.sermon:hover {
+    transform: scale(1.05); /* Scale up the sermon on hover */
+}
+
+
+/* Controls on Thumbnail */
+.sermon-controls {
+    position: absolute;
+    bottom: 5px; /* Positions it near the bottom */
+    left: 2px; /* Positions it near the left */
+    display: flex;
+    gap: 10px; /* Adds space between the controls */
+    background-color: white; /* White background for the controls box */
+    padding: 5px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds some shadow */
+}
+
+.control-btn {
+    background-color: rgba(231, 76, 60, 0.9); /* Semi-transparent red */
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #86171b;
+}
+
+/* Sermon Content */
+.sermon-content {
+    flex: 0 0 65%;
+    
+}
+
+.sermon-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.sermon-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #999; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Clearfix for the parent container to accommodate floating elements */
+.sermon-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sermon-content .date {
+    margin-left: auto;
+    float: right; /* Floats the date to the left */
+    text-align: right;
+    color: gray; /* Optional to give the date a distinct color */
+    margin-right: 10px; /* Optional: Adds space between the date and other content */
+}
+
+/* Read More Button */
+.read-more {
+    background-color: #cc3322; /* Red background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #7a261d; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sermon {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sermon-thumbnail, .sermon-content {
+        flex: 1 1 100%;
+    }
+
+    .sermon-controls {
+        bottom: 5px;
+        left: 5px;
+    }
+
+    .control-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.page-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #d82027;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+    background-color: #8b1519;
+}
+
+.page-btn.active {
+    background-color: #007bff; /* Active background color */
+    color: white; /* Active text color */
+    border: 1px solid #0056b3; /* Active border color */
+}
+
+
+
+/* Footer styling */
+.footer {
+    background: #1e1e2f; /* Dark purple background for a sleek, modern look */
+    padding: 80px 0;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 24%;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+    position: relative;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.news-item span {
+    color: #e63946;
+    font-size: 12px;
+}
+
+.newsletter-column form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 12px;
+    border: none;
+    flex-grow: 1;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #d62828;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+/* Hidden message styling */
+.footer-surprise {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 9999;
+}
+
+#close-surprise {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

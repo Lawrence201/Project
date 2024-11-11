@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Donate | Solutions Arena Ministry</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>  
+
+        <header class="donation-header">
+            <div class="background"></div> <!-- Background container -->
+            <div class="content">
+                <nav>
+                    <ul>
+                        <li><a href="file:///C:/Users/SAMUEL%20ABEKAH/Desktop/Solutions%20Arena%20Ministries/HOME/index.html">Home</a> <span>- Donation</span></li>
+                    </ul>
+                </nav>
+                <h1>Donate Now</h1>
+                <div class="icon">
+                    <img src="cross.png" alt="Cross Icon">
+                </div>
+            </div>
+        </header>
+        
+        
+        
+        <div style="margin-bottom: 10px;"></div>
+
+        <div class="donation-section">
+            <h3 class="donation-head">DONATE HERE!</h3>
+            <h1 class="main-title">Save the Humanity, Save Life</h1>
+            <div class="divider"></div>
+            <p class="donation-text">Lorem ipsum dolor sit amet, consectetur adipisci cing elit dolo rem consequ untur natus laudantium commodie adipis.</p>
+            <p class="login-text">Registered before? <a href="#">Log in</a> to use your saved details.</p>
+        </div>
+    
+        <div class="overall-container">
+    
+            <aside class="campaigns">
+                <h3>Our Campaigns</h3>
+                <ul>              
+                    <li><img src="Med 1.jpg" alt="Medical Treatment"> Medical Treatment</li>
+                    <li><img src="Med 2.jpg" alt="Donate Clothes"> Donate Clothes</li>
+                    <li><img src="Med 3.jpg" alt="Shelter for Needy"> Shelter for Needy</li>
+                    <li><img src="Med 4.jpg" alt="Hygienic Food"> Hygienic Food</li>
+                    <li><img src="Med 5.jpg" alt="Education for Children"> Education for Children</li>
+                </ul>
+            </aside>
+           
+            <section class="donation-container">
+
+                    
+                <div class="donation-form">
+                    <h2 class="donation-title">Your Donation</h2>
+                    <h2>Payment</h2>
+                    <label for="payment-method">Select Payment Method:</label>
+                    <div class="payment-method">
+                        <label>
+                            <input type="radio" name="payment-method" value="mtn" onclick="showForm('mtn-form')" required>
+                            <img src="MTN-Momo.jpeg" alt="MTN Mobile Money" class="payment-logo"> MTN Mobile Money
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="paypal" onclick="showForm('paypal-form')" required>
+                            <img src="Paypal.jpg" alt="PayPal" class="payment-logo"> PayPal
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="telcel" onclick="showForm('telcel-form')" required>
+                            <img src="TELE.webp" alt="Telcel Cash" class="payment-logo"> Telcel Cash
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="Tigo Cash" onclick="showForm('Tigo-form')" required>
+                            <img src="Happy.png" alt="Tigo Cash" class="payment-logo"> Tigo Cash
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="other" onclick="showForm('other-form')" required>
+                            <img src="Others.jpg" alt="Other" class="payment-logo"> Other Payment Method
+                        </label>
+                    </div>
+                    <!-- Payment forms as before -->
+                    <!-- MTN Mobile Money Form -->
+                    <div id="mtn-form" class="payment-form">
+                        <h3>MTN Mobile Money</h3>
+                        <form id="donation-form">
+                            <label for="mtn-amount">Donation Amount (GHS):</label>
+                            <input type="number" id="mtn-amount" name="amount" min="1" required>
+                    
+                            <label for="mtn-number">Mobile Number:</label>
+                            <input type="tel" id="mtn-number" name="mtn-number" pattern="[0-9]{10}" placeholder="Enter Mobile Number" required>
+                    
+                            <button type="submit">Donate via MTN MoMo</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Other payment forms remain unchanged -->
+                       <!-- PayPal Form -->
+                    <div id="paypal-form" class="payment-form">
+                        <h3>PayPal</h3>
+                        <form action="/submit-paypal" method="POST">
+                            <label for="paypal-amount">Donation Amount (USD):</label>
+                            <input type="number" id="paypal-amount" name="amount" min="1" required>
+            
+                            <button type="submit">Donate via PayPal</button>
+                        </form>
+                    </div>
+            
+                    <!-- Telcel Cash Form -->
+                    <div id="telcel-form" class="payment-form">
+                        <h3>Telcel Cash</h3>
+                        <form action="/submit-telcel" method="POST">
+                            <label for="telcel-amount">Donation Amount (USD):</label>
+                            <input type="number" id="telcel-amount" name="amount" min="1" required>
+                            
+                            <label for="telcel-number">Telcel Number:</label>
+                            <input type="tel" id="telcel-number" name="telcel-number" pattern="[0-9]{10}" placeholder="Enter Telcel Number" required>
+            
+                            <button type="submit">Donate via Telcel Cash</button>
+                        </form>
+                    </div>
+    
+                    
+                    <!-- Tigo Cash Form -->
+                    <div id="Tigo-form" class="payment-form">
+                        <h3>Tigo Cash</h3>
+                        <form action="/submit-Tigo" method="POST">
+                            <label for="Tigo-amount">Donation Amount (USD):</label>
+                            <input type="number" id="Tigo-amount" name="amount" min="1" required>
+                            
+                            <label for="Tigo-number">Tigo Number:</label>
+                            <input type="tel" id="Tigo-number" name="Tigo-number" pattern="[0-9]{10}" placeholder="Enter Tigo Number" required>
+            
+                            <button type="submit">Donate via Tigo Cash</button>
+                        </form>
+                    </div>
+            
+                    
+            
+                    <!-- Other Payment Form -->
+                    <div id="other-form" class="payment-form">
+                        <h3>Other Payment Method</h3>
+                        <form action="/submit-other" method="POST">
+                            <label for="other-amount">Donation Amount (GHS):</label>
+                            <input type="number" id="other-amount" name="amount" min="1" required>
+            
+                            <label for="other-details">Payment Details:</label>
+                            <input type="text" id="other-details" name="other-details" placeholder="Enter Payment Details" required>
+            
+                            <button type="submit">Donate</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </section>          
+           
+        </div> 
+    
+        <div style="margin-bottom: 50px;"></div>
+    
+        <footer class="footer">
+            <div class="pack">
+                <div class="footer-column">
+                    <h3>About SolutionArenaministry</h3>
+                    <p>SolutionArenaministry Church is a beacon of hope and faith, inspiring communities worldwide. Our mission is to spread love, unity, and purpose. Join us in this journey.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Access</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Our Beliefs</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>From the Blog</h3>
+                    <div class="news-item">
+                        <p>Revival in Uganda: New Horizons</p>
+                        <span>August 15, 2024</span>
+                    </div>
+                    <div class="news-item">
+                        <p>Embracing Change in the Church</p>
+                        <span>July 30, 2024</span>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@solutionarenaministry.org</p>
+                    <p>Phone: +123 456 789</p>
+                    <p>Location: 123 Faith Avenue, Hope City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 SolutionArenaministry. Crafted with care by Zozothemes.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Donate</a>
+                </div>
+            </div>
+            <button id="back-to-top">Back to Top</button>
+        </footer>
+    
+        <script src="script.js"></script>
+    </body>
+
+</html>
+
+
+
+
+

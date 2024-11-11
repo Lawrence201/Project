@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header class="contact-header">
+        <div class="background"></div> <!-- Background container -->
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><a href="file:///C:/Users/SAMUEL%20ABEKAH/Desktop/Solutions%20Arena%20Ministries/HOME/index.html">Home</a> <span>- Contact</span></li>
+                </ul>
+            </nav>
+            <h1>Contact Us</h1>
+            <div class="icon">
+                <img src="cross.png" alt="Cross Icon">
+            </div>
+        </div>
+    </header>
+    
+    
+    <div style="margin-bottom: 50px;"></div>
+
+   <!-- Main Container -->
+<div class="container">
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="info-box location">
+            <div class="overlay"></div>
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Location</h3>
+            <p>684 West College St, Sun City, United States of America.</p>
+        </div>
+        <div class="info-box phone">
+            <div class="overlay"></div>
+            <i class="fas fa-phone-alt"></i>
+            <h3>Phone Number</h3>
+            <p>(+55) 654 - 545 - 5418<br>(+55) 654 - 545 - 1235</p>
+        </div>
+        <div class="info-box email">
+            <div class="overlay"></div>
+            <i class="fas fa-envelope"></i>
+            <h3>Email Address</h3>
+            <p>info@example.com<br>info@exgen.com</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <form>
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" name="phone" placeholder="Phone" required>
+            </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit">Send Now</button>
+        </form>
+        <div class="form-image">
+            <img src="Call 2.jpg" alt="Church Image">
+        </div>
+    </section>
+
+</div>
+
+
+    <div style="margin-bottom: 50px;"></div>
+
+    <div class="row" style="height: 100%; width: 100%; text-align: center;">
+        <!-- Heading with line and hover effect -->
+        <h2 class="locate-heading" id="locateHeading">LOCATE US</h2>
+        <hr style="width: 100%; border: none; height: 1px; background: linear-gradient(to right, transparent, #000, transparent); opacity: 0.3; margin-bottom: 20px;">
+    
+        <!-- Space before the map -->
+        <div style="margin-bottom: 20px;"></div>
+    
+        <!-- Map iframe with updated location -->
+        <div id="mapContainer" style="margin-top: 20px;">
+            <iframe class="map" id="mapIframe" style="border: 1px solid blue; width: 100%; height: 380px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Object-Oriented Approach for Map Interaction
+        class MapHandler {
+            constructor(mapContainerId, iframeId) {
+                this.mapContainer = document.getElementById(mapContainerId);
+                this.mapIframe = document.getElementById(iframeId);
+        
+                // Automatically load the map on page load
+                this.loadMap();
+            }
+        
+            // Method to load the map dynamically
+            loadMap() {
+                this.mapIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.734226243923!2d-0.2876434!3d5.5745357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf990009468271%3A0x41421df7ff7693d!2sM%20Arslan!5e0!3m2!1sen!2sgh!4v1681802323498!5m2!1sen!2sgh";
+                this.mapContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Initialize the MapHandler class to automatically load the map
+        const mapHandler = new MapHandler('mapContainer', 'mapIframe');
+        
+        // Back to Top Button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        
+        // Show the button when user scrolls down 100px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        
+        // Scroll to the top when the button is clicked
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+ </script>
+  
+
+  <div style="margin-bottom: 50px;"></div>
+    
+    <footer class="footer">
+        <div class="pack">
+            <div class="footer-column">
+                <h3>About SolutionArenaministry</h3>
+                <p>SolutionArenaministry Church is a beacon of hope and faith, inspiring communities worldwide. Our mission is to spread love, unity, and purpose. Join us in this journey.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Access</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Our Beliefs</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>From the Blog</h3>
+                <div class="news-item">
+                    <p>Revival in Uganda: New Horizons</p>
+                    <span>August 15, 2024</span>
+                </div>
+                <div class="news-item">
+                    <p>Embracing Change in the Church</p>
+                    <span>July 30, 2024</span>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@solutionarenaministry.org</p>
+                <p>Phone: +123 456 789</p>
+                <p>Location: 123 Faith Avenue, Hope City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>&copy; 2024 SolutionArenaministry. Crafted with care by Zozothemes.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Donate</a>
+            </div>
+        </div>
+        <button id="back-to-top">Back to Top</button>
+    </footer>
+
+    <script>
+        // Show "Back to Top" button when scrolling down
+window.onscroll = function() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+};
+
+// Scroll back to top when the button is clicked
+document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+    </script>
+    
+
+
+</body>
+</html>

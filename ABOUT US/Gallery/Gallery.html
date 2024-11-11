@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="icon" type="image/png" href="Image 1.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <div class="header-container">
+        <header class="header">
+            <div class="logo-section">
+                <img src="Image 4.jpg" alt="Church Logo" class="logo-image">
+                <div class="logo-text">
+                    <h2>SOLUTIONS AREANA MINISTRY - Gh.<br>Gallery</h2>
+                    <p>GOD FIRST</p>
+                </div>
+            </div>
+            <div class="contact-section">
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <p>Call Us</p>
+                        <span>+233 ( 54 503 6934 )</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <p>Email Us</p>
+                        <span>info@tacyouthonline.com</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon-circle"><i class="fas fa-users"></i></div>
+                    <div>
+                        <p>Follow Us</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+
+
+    <header class="gallery-header">
+        <div class="background"></div> <!-- Background container -->
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><a href="file:///C:/Users/SAMUEL%20ABEKAH/Desktop/Solutions%20Arena%20Ministries/HOME/index.html">Home</a> <span>- Events</span></li>
+                </ul>
+            </nav>
+            <h1>Gallery</h1>
+            <div class="icon">
+                <img src="Images/cross.png" alt="Cross Icon">
+            </div>
+        </div>
+    </header>
+    
+    <div style="margin-bottom: 45px;"></div>
+
+    <div class="gallery">
+        <div class="image" onclick="openModal();currentSlide(1)">
+            <img src="Images/Gallery 1 (1).jpg" alt="Image 1">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(2)">
+            <img src="Images/Gallery 2.jpg" alt="Image 2">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(3)">
+            <img src="Images/Gallery 3.jpg" alt="Image 3">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(4)">
+            <img src="Images/Gallery 4.jpg" alt="Image 4">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(5)">
+            <img src="Images/Gallery 5.jpg" alt="Image 5">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(6)">
+            <img src="Images/Gallery 6.jpg" alt="Image 6">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(7)">
+            <img src="Images/Gallery 7.jpg" alt="Image 7">
+        </div>
+    
+        <div class="image" onclick="openModal();currentSlide(8)">
+            <img src="Images/Gallery 8.jpg" alt="Image 8">
+        </div>
+    </div>
+
+   
+
+
+    <!-- Modal Section (for image pop-up) -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="Images/Gallery 1 (1).jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="Images/Gallery 2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="Images/Gallery 3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="Images/Gallery 4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="Images/Gallery 5.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="Images/Gallery 6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="Images/Gallery 7.jpg" style="width:100%">
+            </div>
+            
+            
+            <div class="mySlides">
+                <img src="Images/Gallery 8.jpg" style="width:100%">
+            </div>
+
+          
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    
+        <div style="margin-bottom: 45px;"></div>
+    
+
+        <footer class="footer">
+            <div class="pack">
+                <div class="footer-column">
+                    <h3>About SolutionArenaministry</h3>
+                    <p>SolutionArenaministry Church is a beacon of hope and faith, inspiring communities worldwide. Our mission is to spread love, unity, and purpose. Join us in this journey.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Access</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Our Beliefs</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>From the Blog</h3>
+                    <div class="news-item">
+                        <p>Revival in Uganda: New Horizons</p>
+                        <span>August 15, 2024</span>
+                    </div>
+                    <div class="news-item">
+                        <p>Embracing Change in the Church</p>
+                        <span>July 30, 2024</span>
+                    </div>
+                </div>
+                <div class="footer-column newsletter-column">
+                    <h3>Stay Connected</h3>
+                    <p>Sign up to receive our newsletter with exclusive updates on events, missions, and more.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 Zegen Church. Crafted with care by Zozothemes.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Donate</a>
+                </div>
+            </div>
+            <div class="footer-surprise" id="footer-surprise">
+                <p>Welcome to Zegen! We are excited to share our journey with you.</p>
+                <button id="close-surprise">Close</button>
+            </div>
+        </footer>
+
+
+ <script src="scripts.js"></script>
+
+
+</body>
+</html>

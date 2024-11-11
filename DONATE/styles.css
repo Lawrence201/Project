@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Main header styling */
+.donation-header {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background with blur effect */
+.donation-header .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image10.jpg'); /* Replace with your actual background image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Applies blur to the background image */
+    z-index: 0; /* Background behind content */
+}
+
+/* Content container */
+.donation-header .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Navigation */
+.donation-header nav ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.donation-header nav ul li {
+    display: inline-block;
+    color: white; /* White color for "Home" */
+    font-weight: bold;
+}
+
+.donation-header nav ul li span {
+    color: #ff4c4c; /* Color for "Donation" */
+}
+
+.donation-header nav ul li a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.donation-header nav ul li a:hover {
+    color: rgb(145, 145, 73); /* Optional: Add a hover effect to change the color */
+}
+
+/* Title styling */
+.donation-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.donation-header .icon {
+    margin-top: 20px;
+}
+
+.donation-header .icon img {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: auto;
+}
+
+
+
+
+
+
+.donation-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.donation-head {
+    color: #d10027;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 36px;
+    color: #2e2e2e;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 40px;
+    height: 3px;
+    background-color: #d10027;
+    margin: 0 auto 20px;
+}
+
+.donation-text {
+    font-size: 14px;
+    color: #b1b1b1;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.login-text {
+    font-size: 14px;
+    color: #2e2e2e;
+}
+
+.login-text a {
+    color: #d10027;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+.overall-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: flex-start; /* Align the sections to the top */
+    gap: 40px; /* Space between the two sections */
+    padding: 20px;
+    margin: 0 auto; /* Center the entire container */
+    max-width: 1200px; /* Limit the width of the container */
+    background-color:  #f9f9f9; /* White color with 50% transparency */
+    border-radius: 10px; /* Optional: Add some rounded corners */
+}
+
+.campaigns {
+    width: 300px; /* Adjust as needed */
+    margin: 0 auto; /* Center the campaigns section */
+    max-height: 600px; /* Control the visible height to show only 3 images */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.campaigns ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.campaigns li {
+    margin-bottom: 20px; /* Space between campaign items */
+    text-align: center;
+}
+
+.campaigns img {
+    width: 100%; /* Ensures the image takes the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 180px; /* Control the height of the images */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+/* Optional: Customize the scroll bar appearance */
+.campaigns::-webkit-scrollbar {
+    width: 10px;
+}
+
+.campaigns::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 5px;
+}
+
+.campaigns::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+
+.donation-container {
+    max-width: 800px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 30px; /* Padding for spacing */
+    border: 1px solid #ccc; /* Optional: border around the container */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #fff;
+}
+
+.donation-title {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.payment-form {
+    display: none;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    margin-bottom: 10px; /* Space between each label */
+}
+
+input, select, button {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-form input {
+    width: 100%; /* Full width inputs within forms */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 5px; /* Space between form labels and inputs */
+}
+
+button {
+    background-color: #d10027;;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8d061f;;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: space-between; /* Spread out payment options evenly */
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+    gap: 15px; /* Space between each payment method */
+}
+
+.payment-method label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-basis: calc(45% - 10px); /* Reduced width for each method */
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.payment-method label:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 8px; /* Reduced space between radio button and content */
+}
+
+.payment-method img.payment-logo {
+    width: 100px;  /* Slightly increased image width */
+    height: 80px; /* Slightly increased image height */
+    margin-right: 8px; /* Reduced margin between image and text */
+}
+
+/* For smaller screens, stack the sections vertically */
+@media (max-width: 768px) {
+    .overall-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donation-container,
+    .campaigns {
+        width: 100%; /* Make them full width on small screens */
+    }
+}
+
+/* Footer styling */
+.footer {
+    background: #1e1e2f;
+    padding: 80px 0;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 24%;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.news-item span {
+    color: #e63946;
+    font-size: 12px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #d62828;
+}
+
+/* Show button when scrolled down */
+.show {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

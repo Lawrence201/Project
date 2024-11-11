@@ -1,0 +1,409 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the container */
+    padding: 20px; /* Adds space inside the container */
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+/* Main header styling */
+.contact-header {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background with blur effect */
+.contact-header .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image10.jpg'); /* Replace with your actual background image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Applies blur to the background image */
+    z-index: 0; /* Background behind content */
+}
+
+/* Content container */
+.contact-header .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Navigation */
+.contact-header nav ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.contact-header nav ul li {
+    display: inline-block;
+    color: white; /* White color for "Home" */
+    font-weight: bold;
+}
+
+.contact-header nav ul li span {
+    color: #ff4c4c; /* Color for "Contact" */
+}
+
+.contact-header nav ul li a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.contact-header nav ul li a:hover {
+    color: rgb(145, 145, 73); /* Optional: Add a hover effect to change the color */
+}
+
+/* Title styling */
+.contact-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.contact-header .icon {
+    margin-top: 20px;
+}
+
+.contact-header .icon img {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: auto;
+}
+
+
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.info-box {
+    position: relative;
+    width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add the scale transform on hover */
+.info-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the box on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Enhances the shadow on hover */
+}
+
+/* Background images for the boxes */
+.location {
+    background-image: url('Map 1.jpg');
+}
+
+.phone {
+    background-image: url('Call 1.jpg');
+}
+
+.email {
+    background-image: url('Email 1.jpg');
+}
+
+/* Transparent overlay for 'Our Location' (Red with transparency) */
+.location .overlay {
+    background-color: rgba(200, 59, 59, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Transparent overlay for 'Phone Number' and 'Email Address' (Darker Blue with transparency) */
+.phone .overlay, 
+.email .overlay {
+    background-color: rgba(42, 58, 75, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* The content (icon, title, and text) should stay above the overlay */
+.info-box i,
+.info-box h3,
+.info-box p {
+    position: relative;
+    z-index: 2;
+}
+
+.info-box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.info-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Updated Contact Form Section */
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px; /* Added gap for better spacing */
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px; /* Softer edges */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Larger shadow for a more floating effect */
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px); /* Adds a lifting effect when hovering over the form */
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0; /* More space between inputs */
+    border-radius: 8px; /* Softer edges */
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #ff4c4c; /* Highlight border on focus */
+    box-shadow: 0px 0px 8px rgba(255, 76, 76, 0.3); /* Soft shadow on focus */
+}
+
+textarea {
+    resize: none;
+    height: 180px; /* Slightly larger height for better usability */
+}
+
+/* Button Styling */
+button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Button spans full width for modern look */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff6666; /* Lighter shade on hover */
+    transform: scale(1.05); /* Button grows slightly when hovered */
+}
+
+
+.form-image {
+    width: 45%;
+}
+
+.form-image img {
+    width: 100%;
+    height: 540px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image is properly scaled */
+    border-radius: 8px;
+}
+
+/* Footer styling */
+.footer {
+    background: #1e1e2f;
+    padding: 80px 0;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 24%;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.news-item span {
+    color: #e63946;
+    font-size: 12px;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+#back-to-top:hover {
+    background-color: #d62828;
+}
+
+/* Show button when scrolled down */
+.show {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

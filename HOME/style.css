@@ -1,0 +1,1789 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Top Bar Styles */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: #15294c;
+    color: white;
+    font-size: 12px;
+    align-items: center;
+    position: relative;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.address i {
+    margin-right: 8px;
+    color: #e02121;
+}
+/* Social Icons */
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #1e1e2f;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1.5px; /* Increase the thickness */
+    background-color: rgba(255, 255, 255, 0.7); /* Make the white line clearer */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Slight scale effect on hover */
+    color: white; /* Keep the icon white */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+.social-icons a:nth-child(1) { background-color: #3b5998; } /* Facebook */
+.social-icons a:nth-child(2) {background-color:  #000000;} /* Updated color for X */
+.social-icons a:nth-child(3) { background-color: #e4405f; } /* Instagram */
+.social-icons a:nth-child(4) { background-color: #0f0f0f; } /* tiktok */
+.social-icons a:nth-child(5) { background-color: #ff0000; } /* YouTube */
+.social-icons a:nth-child(6) { background-color: #db4437; } /* Gmail */
+.social-icons a:nth-child(7) { background-color: #0f9d58; } /* Google */
+.social-icons a:nth-child(8) { background-color: #4285f4; } /* Search */
+
+.social-icons a i {
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons::before {
+    content: "";
+    height: 20px;
+    width: 1px;
+    background-color: white;
+    margin-right: 15px;
+}
+
+/* Horizontal divider line */
+.top-bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Increased the thickness */
+    background-color: rgba(255, 255, 255, 0.7); /* Make it more visible with reduced transparency */
+}
+
+
+/* .lawrence styles */
+.lawrence {
+    position: relative;
+    /* Any other styles from your .lawrence class */
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Important for sliding animation */
+    top: 0;
+    left: 100%; /* Start offscreen */
+    transition: left 0.9s ease-in-out; /* Smooth sliding effect */
+}
+
+
+
+
+/* Ensure images cover the slideshow container */
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Image should remain behind the overlay */
+}
+
+/* Overlay for individual slides */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 30, 54, 0.7); /* Semi-transparent dark blue color */
+    z-index: 1;
+}
+
+/* Slideshow navigation styles */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 3;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/circles */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Navbar Logo */
+.logo-wrapper {
+    transform: translateX(25px); /* Shift the entire logo slightly to the left */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 70px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-family: Impact, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #15294c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.logo-text:hover, .tagline:hover {
+    color: #c51919; /* Darker red when hovered */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    border-bottom: 3px solid #f5b812; /* Adjust color and thickness as needed */
+    padding-bottom: 5px; /* Optional: Adds some space below the border */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between; /* Adjust this to "space-between" or "flex-start" */
+    gap: 5px; /* Decreased gap to reduce space between items */
+    transform: translateX(15px); /* Shift the entire navbar to the right by 10px */
+}
+
+.nav-links li {
+    margin: 0 5px; /* Reduced margin between list items */
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 16px; /* Adjust the padding to reduce space around text */
+    text-align: center;
+    transition: color 0.3s ease;
+    margin-left: 0px; /* Removed extra margin */
+}
+
+
+/* Dropdown container */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px; /* Adjusted for more space */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: normal; /* Default font weight */
+    transition: background-color 0.3s, font-weight 0.3s; /* Smooth transition */
+}
+
+/* Hover effect on individual links */
+.dropdown-content a:hover {
+    background-color: #f44336; /* Red background color on hover */
+    color: white; /* White text color on hover */
+    font-weight: bold; /* Bold text on hover */
+}
+
+/* Show the dropdown when hovering */
+li:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: style for main nav links hover */
+.nav-links a:hover {
+    color: #faad32;
+}
+
+
+.nav-links a:hover {
+    color: #faad32;
+}
+
+.donate-butn {
+    background-color: #e02121;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for transform */
+    transform: translateX(-25px); /* Shift button to the left by 25px */
+}
+
+.donate-butn:hover {
+    background-color: #770c0c;
+    transform: translateX(-25px) scale(1.1); /* Shift left and scale up */
+}
+
+
+/* Hero Section */
+.zegen-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  
+}
+
+.zegen-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 30, 54, 0.7); /* Semi-transparent dark blue color */
+    z-index: -1; 
+    justify-content: center; 
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger for the 'beat' effect */
+    }
+}
+
+.zegen-hero-overlay svg {
+    margin-top: 170px; /* Move it sligtly down small */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.zegen-hero-overlay svg.show {
+    opacity: 1;
+    animation: heartbeat 2.5s ease-in-out infinite; /* Heartbeat animation */
+}
+
+.custom-svg {
+    position: relative; /* Keeps the positioning relative to its container */
+    display: block;
+    margin: auto; /* Horizontally centers the SVG */
+    top: -95px; /* Adjusts positioning */
+    opacity: 0; /* Initially hides the SVG */
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.custom-hero-svg {
+    position: relative; /* Keeps the positioning relative to its container */
+    display: block;
+    margin: auto; /* Horizontally centers the SVG */
+    top: -120px; /* Adjusts positioning */
+    opacity: 0; /* Initially hides the SVG */
+    transform: translateY(50px); /* Starts the SVG slightly below its original position */
+    animation: slideInFromBottom 2s ease-out forwards; /* Applies the slide-in animation */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start 50px below the original position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Slide into the original position */
+    }
+}
+
+.zegen-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 170px; /* Moves only the content down, keeping the overlay in place */
+}
+
+.zegen-container-wrapper {
+    margin-top: -50px; /* Pulls everything up */
+}
+
+
+
+ /* Typewriter Text */
+ .zegen-small-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: red;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; /* Hides text initially */
+    position: absolute;
+    top: -18%; /* Position near the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    animation: typing 6s steps(30, end) forwards, scaleUp 6s forwards; /* Add scaling animation */
+}
+
+.help-small-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: red;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; /* Hides text initially */
+    position: absolute;
+    top: -5%; /* Moves the text slightly down */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    animation: typing 6s steps(30, end) forwards, scaleUp 6s forwards; /* Add scaling animation */
+}
+
+.custom-small-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: red;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden; /* Hides text initially */
+    position: absolute;
+    top: 8%; /* Moves the text slightly down */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    animation: typing 6s steps(30, end) forwards, scaleUp 6s forwards; /* Add scaling animation */
+  }
+  
+ 
+
+
+
+/* Keyframes for Typing Effect */
+@keyframes typing {
+    from { width: 0; } /* Start with no width */
+    to { width: 100%; } /* End with full width */
+}
+
+/* Keyframes for Scaling Effect */
+@keyframes scaleUp {
+    0% { transform: translateX(-50%) scale(1); } /* Start at normal size */
+    50% { transform: translateX(-50%) scale(1.2); } /* Scale up to 120% */
+    100% { transform: translateX(-50%) scale(1); } /* Return to original size */
+}
+
+.zegen-hero-title-container {
+    margin-top: -70px; /* Adjust this value to move it up */
+}
+
+.zegen-description-container {
+    position: relative;
+    top: -12px; /* Adjust this value to move it up or down */
+}
+
+
+
+  
+
+
+.zegen-hero-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    
+}
+
+.big-textbox {
+    position: relative;
+    top: -30px; /* Adjust this value to move it up or down */
+}
+
+
+
+
+/* Description Text */
+.zegen-description {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+
+
+.zegen-btn {
+    display: inline-block; /* Ensures the button behaves like a block element */
+    padding: 15px 30px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+
+.zegen-btn:hover {
+    transform: scale(1.1); /* Scale up the button on hover */
+}
+
+.zegen-hero {
+    z-index: 1;
+}
+
+
+.events-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    overflow: hidden; /* Hide overflow to prevent showing hidden elements */
+   }
+
+
+
+.event-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f3e6e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    transition: transform 0.5s ease; /* Add transition for smooth sliding */
+    /* existing styles */
+}
+
+
+/* Hide all events initially, JavaScript will reveal the active ones */
+.event-container {
+    display: none;
+}
+
+
+
+/* Show only the first two events */
+.event-container:nth-child(1),
+.event-container:nth-child(2) {
+    display: flex; /* Display the first two events */
+}
+
+/* Style for the currently visible event */
+.event-container.active {
+    opacity: 1; /* Make the active event visible */
+    z-index: 1; /* Ensure active event is on top */
+}
+
+/* Hide all other events */
+.event-container:nth-child(n+3) {
+    display: none; /* Hide events from the third one onward */
+}
+
+.event-container.hidden {
+    display: none; /* Hide hidden elements */
+}
+
+
+
+.event-date {
+    background-color: #e48e8b;
+    color: #6b2b1a;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.event-date:before {
+    content: "\1F4C5";
+    font-size: 18px;
+    color: white;
+}
+
+.event-date .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.event-date .time {
+    background-color: #8b3a3a;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.event-details:hover {
+    transform: scale(1.05); /* Scale up by 5% */
+}
+
+.event-details .event-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.event-details .event-description {
+    color: #666;
+}
+
+.event-details a {
+    text-decoration: none;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+
+
+
+/* Wrapper to center content */
+.annouce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%; /* Adjust size as needed (e.g., 95% of the viewport width) */
+    max-width: 1400px; /* Maximum width to limit expansion */
+    margin: 2rem auto; /* Center with margin on top and bottom */
+    border: 2px solid #ccc; /* Add border */
+    padding: 1rem; /* Padding inside the wrapper */
+    background-color: #f9f9f9; /* Optional: change background color */
+    border-radius: 8px; /* Optional: add rounded corners */
+    overflow: hidden; /* Ensures that any content exceeding the wrapper is hidden */
+}
+
+
+
+/* Annocement*/
+.heading {
+    text-align: center;
+    padding: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* Main Container */
+.main-container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    color: #333; /* Adjust to match text color */
+    background: #f9f9f9; /* Background color */
+}
+/* Birthday Card Styles */
+
+.birthday-card {
+    border: 2px solid #e0e0e0;
+    padding: 1rem; /* Reduced padding for smaller height */
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff4e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-bottom: 0;
+    max-height: 625px; /* Set a smaller height */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+
+.birthday-image {
+    width: 80%; /* Increase the width as desired (e.g., 150% of container width) */
+    height: 48%; /* Increase the height similarly (e.g., 150% of container height) */
+    max-width: none; /* Remove any maximum width restrictions */
+    max-height: none; /* Remove any maximum height restrictions */
+    border-radius: 8px; /* Keeps the rounded corners */
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ensures the image maintains aspect ratio without distortion */
+    position: relative;
+    
+}
+
+/* Hover effect: Scale up the image */
+.birthday-image:hover {
+    transform: scale(1.1);  /* Scale up the image to 110% */
+  }
+
+
+
+
+.birthday-title {
+    font-size: 2rem;
+    color: #e67e22; /* Bright and cheerful color */
+    margin-bottom: 0.5rem;
+}
+
+.birthday-message {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.birthday-date {
+    font-size: 1rem;
+    color: #888;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: #fff;
+}
+
+.tab-menu {
+    list-style: none;
+    display: flex;
+    gap: 0.7rem;
+}
+
+.tab {
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    background: #f0f8ff; /* Light blue background for subtle color */
+    border-radius: 5px;
+    text-align: center;
+    text-align: center;
+    color: #333; /* Dark gray text for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #ccc; /* Add a border for definition */
+}
+
+.tab:hover {
+    background: #cce7ff; /* Slightly darker blue on hover */
+    color: #000; /* Darker text color on hover */
+}
+
+.tab.active {
+    background: #007bff; /* Active tab with blue color */
+    color: #fff; /* White text for active tab */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the sidebar takes up the full height of the parent */
+}
+
+
+
+.scrollable-section {
+    max-height: 528px; /* Limit height and allow scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 1rem;
+    border: 2px solid #d3d3d3; /* Light gray border */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Soft background color */
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+
+.scroll-item.calendar-item {
+    height: 500px; /* Set a specific height */
+    max-height: 600px; /* Set a maximum height if needed */
+    overflow-y: auto;  /* Allow vertical scrolling if content overflows */
+    padding: 1rem; /* Optional: Add padding if needed */
+    box-sizing: border-box; /* Ensures padding doesn't increase element size */
+    overflow: hidden; /* Disable scrolling */
+    transform: none; /* Remove any transform effects */
+    transition: none; /* Optionally remove any transition effects, if you want to avoid animations */
+
+}
+
+#calendar {
+    height: 100%;
+    width: 100%; /* Optional: Ensures the calendar also fills the width */
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sleek font */
+    background-color: #f7faff; /* Light, clean background color */
+    border-radius: 10px; /* Smooth rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Gentle shadow for depth */
+    padding: 12px;
+    margin: 10px auto;
+}
+
+
+/* Styling for the calendar header toolbar */
+.fc-toolbar {
+    background-color: #5c7cfa; /* Bright blue for header */
+    color: #ffffff; /* White text color for contrast */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    padding: 8px;
+    text-align: center; /* Center-aligns text */
+}
+
+/* Styling for grid days (date cells) */
+.fc .fc-daygrid-day-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f0ff; /* Light blue background for dates */
+    color: #1c3b8a; /* Dark blue text color */
+    border-radius: 6px;
+    padding: 8px;
+    margin: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.fc .fc-daygrid-day-number:hover {
+    background-color: #cce0ff; /* Lighter blue on hover */
+    cursor: pointer;
+}
+
+/* Styling for events */
+.fc-event {
+    background-color: #ff6f61 !important; /* Vibrant coral color for events */
+    color: #ffffff !important; /* White text for visibility */
+    border: none;
+    border-radius: 6px;
+    padding: 3px 5px;
+}
+
+/* Styling for today's date */
+.fc-day-today {
+    background-color: #dff2d8 !important; /* Soft green highlight for today */
+    border-radius: 6px;
+    border: 1px solid #b6d7a8; /* Slight border for emphasis */
+}
+
+
+
+
+.scroll-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #007bff; /* Blue border to highlight the announcement */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out;
+}
+
+.scroll-item:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.scroll-title {
+    font-size: 1.2rem; /* Increased font size for visibility */
+    color: #333; /* Dark gray for better contrast */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.scroll-date {
+    font-size: 0.9rem; /* Smaller font size for date */
+    color: #555; /* Medium gray for date */
+    font-style: italic;
+}
+
+/* Scrollbar Styling (optional, for modern browsers) */
+.scrollable-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 4px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+
+
+
+/* Upcoming Birthday Scroll Item */
+.upcoming-birthday {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-left: 5px solid #ff5722; /* Orange border to highlight the birthday */
+    background-color: #fffaf0; /* Soft yellow background for birthday */
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Slightly more pronounced shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.upcoming-birthday:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+    background-color: #fff2cc; /* Lighter yellow background on hover */
+}
+
+.upcoming-birthday-image {
+    width: 100%; /* Makes image full-width within its container */
+    height: auto;
+    max-height: 200px; /* Limit the height for a better fit */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 0.8rem;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.birthday-wish-message {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Hidden by default */
+.upcoming-birthday {
+    display: none;
+}
+
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: -30px auto 0 auto;
+    padding: 60px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.about-us {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    height: auto;
+}
+
+.about-us video {
+    width: 100%;
+    height: 520px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.content .highlight {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.icons-section {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-box {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: scale(1.1);
+}
+
+.icon-box i {
+    font-size: 2rem;
+    color: #C21807;
+}
+
+.progress-bars {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-value {
+    height: 100%;
+    background-color: #C21807;
+    width: 0;
+    transition: width 1s ease;
+    border-radius: 10px;
+}
+
+#scrollToAbout {
+    position: fixed;
+    bottom: 20px;  /* Keep the button at the bottom */
+    left: 20px;    /* Move it to the left */
+    padding: 15px 30px;
+    background-color: #C21807;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 9999; /* Ensure it overlays all other elements */
+}
+
+#scrollToAbout:hover {
+    background-color: #a91507;
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+/* Main section with a blurred background */
+.prayer-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('Images/Image 7.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.prayer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px); 
+    z-index: 1;
+}
+
+/* Content styling */
+.prayer-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+}
+
+.heart-icon span {
+    font-size: 3rem;
+    animation: heartbeat 1s infinite;
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.prayer-quote {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out forwards; 
+}
+
+.prayer-author {
+    font-style: italic;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out 1s forwards;
+}
+
+.donate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Text animation */
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Prayer Request Form styling */
+.prayer-form {
+    position: fixed;
+    bottom: -300px;
+    right: 20px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.5s ease;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+.prayer-form input[name="name"] {
+    color: black; /* Set the text color to black */
+    font-size: 16px; /* Set the font size */
+    padding: 10px; /* Add some padding for better spacing */
+    width: 100%; /* Make the input field take the full width of the form */
+    border: 1px solid #ccc; /* Add a light border */
+    border-radius: 5px; /* Round the corners */
+    box-sizing: border-box; /* Ensure padding and width are handled correctly */
+    background-color: white; /* Set the background to white */
+}
+
+.prayer-form input[name="name"]::placeholder {
+    color: #888; /* Set placeholder color (light gray) */
+}
+
+.prayer-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.prayer-form textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.send-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.send-button:hover {
+    background-color: #555;
+}
+
+/* Show prayer form animation */
+.prayer-form.show {
+    bottom: 20px;
+}
+
+
+
+
+.ministries-section {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.ministries-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.slider {
+    display: flex;   
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    animation: slide 20s linear infinite; /* Animation for continuous slide */    
+    animation-play-state: running; /* Ensure animation is running initially */
+}
+
+
+
+
+
+.slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+
+
+
+/* Animation to slide ministries to the right */
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.ministry {
+    
+    flex: 0 0 33.333%; /* Each ministry takes up 33.33% of the slider */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    justify-content: space-between; /* Push the "Read more" to the bottom */
+    
+}
+
+.ministry:hover {
+    transform: scale(1.05);
+}
+
+
+.ministry img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ministry h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.ministry p {
+    color: #666;
+}
+
+.ministry a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ministry .more-info {
+    display: none; /* Hide the extra info initially */
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.ministry .read-more {
+    color: #ec1919;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: auto; /* Push the "Read more" link to the bottom */
+}
+
+.ministry .read-more:hover {
+    text-decoration: underline;
+}
+
+
+
+.call-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('Images/Image 8.jpg') no-repeat center center/cover;
+    overflow: hidden;
+    animation: backgroundMove 15s infinite linear;
+}
+
+@keyframes backgroundMove {
+    0% {background-position: 0 0;}
+    100% {background-position: 100% 100%;}
+}
+
+.background-blur {
+    backdrop-filter: blur(50px);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.contact-section {
+    display: flex;
+    max-width: 950px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.left-card {
+    background-color: #D32F2F;
+    padding: 25px;
+    border-radius: 10px;
+    margin-right: 25px;
+    max-width: 330px;
+    animation: bounce 2s infinite; /* Apply the bounce animation */
+
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+.right-card {
+    flex: 1;
+    padding: 25px;
+}
+
+.contact-button {
+    padding: 15px 30px;
+    background-color: #D32F2F;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease, height 0.5s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.contact-button:hover::before {
+    width: 0%;
+    height: 0%;
+    opacity: 1;
+}
+
+.contact-button:focus::before {
+    width: 0%;
+    height: 0%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #B71C1C;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .left-card {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+/* Hover underline effect on heading */
+.locate-heading {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.locate-heading::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.locate-heading:hover::after {
+    width: 100%;
+}
+
+/* Map container animation */
+#mapContainer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Back to Top Button Styling */
+.back-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styling */
+.footer {
+    background: #1e1e2f; /* Dark purple background for a sleek, modern look */
+    padding: 80px 0;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 24%;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+    position: relative;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.news-item span {
+    color: #e63946;
+    font-size: 12px;
+}
+
+.newsletter-column form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 12px;
+    border: none;
+    flex-grow: 1;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #d62828;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 2px solid #f5b812;
+    margin-top: 40px;
+}
+
+.footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+/* Hidden message styling */
+.footer-surprise {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 9999;
+}
+
+#close-surprise {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

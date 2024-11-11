@@ -1,0 +1,1074 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-container {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff; /* Soft blue background color */
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80PX;
+    margin-right: 10px;
+}
+
+.logo-text h2 {
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Bolder font weight */
+    color: #001A78; /* Blue color */
+    line-height: 1.2;
+}
+
+.logo-text h2 span {
+    font-size: 18px; /* Smaller font size for "Youth Ministry" */
+    font-weight: normal; /* Optional: make this part slightly less bold */
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #FF0000; /* Red color for "GOD FIRST" */
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-size: 12px;
+    color: #333;
+}
+
+.icon-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FFCCCC; /* Light red for icon background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.icon-circle i {
+    color: #FF0000; /* Red color for the icons */
+    font-size: 16px;
+}
+
+.contact-item p {
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #001A78; /* Matching color with the text */
+}
+
+.contact-item span {
+    color: #333;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    margin-top: 5px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 16px;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FF0000; /* Red color on hover */
+}
+
+
+
+/* Main header styling */
+.about-header {
+    position: relative;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background with blur effect */
+.about-header .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image10.jpg'); /* Replace with your actual background image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Applies blur to the background image */
+    z-index: 0; /* Background behind content */
+}
+
+.about-heading{
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensures content appears above the background */
+
+}
+
+/* Content container */
+.about-header .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensures content appears above the background */
+}
+
+/* Navigation */
+.about-header nav ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.about-header nav ul li {
+    display: inline-block;
+    color: white; /* Red color for "Home" */
+    font-weight: bold;
+}
+
+.about-header nav ul li span {
+    color:  #ff4c4c; ; /* White for "About Us" */
+}
+
+.about-header nav ul li a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.about-header nav ul li a:hover {
+    color: rgb(145, 145, 73); /* Optional: Add a hover effect to change the color */
+}
+
+/* Title styling */
+.about-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Icon styling */
+.about-header .icon {
+    margin-top: 20px;
+}
+
+.about-header .icon img {
+    width: 50px; /* Adjust the size of the icon as needed */
+    height: auto;
+}
+
+/* Section for About Us */
+.about-us-section {
+    background-color: #f4f4f9; /* Light, professional background */
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-title {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    color: #333333; /* Dark gray for a serious, professional look */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.church-name {
+    font-family: 'Merriweather', serif;
+    font-size: 26px;
+    color: #1a1a1a; /* Almost black */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555555; /* Medium gray for a modern, clean look */
+    text-align: justify;
+    padding: 20px;
+    border-left: 4px solid #0044cc; /* Blue accent line */
+    background-color: #f9f9f9; /* Light gray background for the description */
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Softer, lighter shadow */
+}
+
+@media screen and (max-width: 768px) {
+    .about-title {
+        font-size: 28px;
+    }
+    .church-name {
+        font-size: 24px;
+    }
+    .about-description {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+.belief{
+       
+    font-family: Arial, sans-serif;
+    line-height: 1.6;       
+    
+}
+
+h1 {
+    
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #444;
+}
+
+h2 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.beliefs h2 {
+    margin-top: 20px;
+}
+
+.beliefs p {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+.about-section {
+    padding: 50px 0;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.about-image img {
+    max-width: 150%;
+    max-height: 500px; /* Set the maximum height to control the image's height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image fills the container without stretching */
+}
+
+.about-text h6 {
+    color: #C51F28;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.services {
+    display: flex;
+    gap: 30px;
+}
+
+.service-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.service-icon {
+    font-size: 30px;
+    color: #C51F28;
+    display: flex;
+    align-items: center;
+}
+
+.service-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.service-text p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Scroll button style (optional) */
+.scroll-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #C51F28;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+/* Section styles */
+.pastors-section {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-title {
+    color: #dd2e44;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section-subtitle {
+    color: #333;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Pastors container */
+.pastors-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+
+
+
+.contain {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Flexbox Layout for text and image alignment */
+.pastor-sections {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    justify-content: space-between; /* Space between text and image */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Class to trigger the fade-in effect */
+.pastor-sections.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text section taking 60% of the width */
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 60%; /* Text section takes 60% of the space */
+}
+
+/* Image section with a fixed width */
+.image-section {
+    flex: 0 0 350px; /* Fixed width for the image section */
+}
+
+.image-section img {
+    width: 100%; /* Ensures the image fits within the 350px width */
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+.pastor-heading {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #222;
+}
+
+.pastor-subheading {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 50px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .pastor-sections {
+        flex-direction: column; /* Stack text and image on smaller screens */
+    }
+
+    .text-section {
+        max-width: 100%; /* Allow text to take full width on mobile */
+        padding-right: 0;
+    }
+
+    .image-section {
+        margin-top: 20px; /* Add space between text and image */
+        flex: none; /* Remove fixed width for smaller screens */
+        width: 100%; /* Ensure the image takes up full width on small screens */
+    }
+
+    .image-section img {
+        width: 300px; /* Slightly smaller image on mobile */
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+/* Hide second container by default */
+.hidden {
+    display: none;
+}
+
+/* Individual card styles */
+.pastor-card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px; /* Increase width of the card */
+    padding: 0;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.pastor-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 400px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.pastor-info {
+    background-color: #001b45;
+    color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pastor-info h4 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.pastor-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #cfcfcf;
+}
+
+/* Dots navigation styles */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #dd2e44;
+}
+
+/* Animation styles for scrolling effect */
+.pastors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0; /* Start invisible */
+    transform: translateY(30px); /* Start below */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Transition for smooth effect */
+}
+
+.pastors-container.visible {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Move into position */
+}
+
+/* Zoom effect on card hover */
+.pastor-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+
+
+
+
+
+/* Section styles */
+.ministers-section {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-title {
+    color: #dd2e44;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section-subtitle {
+    color: #333;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Section for Ministers */
+.minister-section {
+    background-color: #f4f4f9; /* Soft, neutral background */
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* Section for Ministers */
+.church-ministers-section {
+    background-color: #f4f4f9;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.church-ministers-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.church-ministers-title {
+    font-family: 'Merriweather', serif;
+    font-size: 32px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.church-ministers-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.church-minister-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.church-minister-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.church-minister-card:hover {
+    transform: translateY(-10px);
+}
+
+.church-minister-name {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    color: #34495e;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.church-minister-role {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #888888;
+}
+
+@media screen and (max-width: 768px) {
+    .church-minister-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+/* Ministers container */
+.ministers-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+/* Hide second container by default */
+.hidden {
+    display: none;
+}
+
+/* Individual card styles */
+.minister-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 0;
+    text-align: center;
+}
+
+.minister-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.minister-info {
+    background-color: #001b45;
+    color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.minister-info h4 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.minister-info p {
+    margin: 0;
+    font-size: 16px;
+    color: #cfcfcf;
+}
+
+
+/* Dots navigation styles */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #dd2e44;
+}
+
+
+
+.ym-Youth{
+    font-family: Arial, sans-serif;
+    background-color: #0D1A26;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ym-container {
+    max-width: 900px;
+    padding: 20px;
+}
+
+.ym-title {
+    font-size: 2em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.ym-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.ym-text {
+    flex: 1;
+}
+
+.ym-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.ym-text strong {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.ym-website-button {
+    display: inline-block;
+    background-color: #606F7B;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.ym-image {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.ym-image-file {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.ym-image-file:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+}
+
+.ym-whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    font-size: 0.9em;
+}
+
+
+
+/* Footer styling */
+.footer {
+    background: #1e1e2f; /* Dark purple background for a sleek, modern look */
+    padding: 80px 0;
+    color: #f1f1f1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 24%;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+    position: relative;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #f1f1f1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.news-item span {
+    color: #e63946;
+    font-size: 12px;
+}
+
+.newsletter-column form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 12px;
+    border: none;
+    flex-grow: 1;
+    background-color: white;
+    color: white;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #d62828;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+/* Hidden message styling */
+.footer-surprise {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 9999;
+}
+
+#close-surprise {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pack {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
